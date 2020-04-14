@@ -29,7 +29,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginBut">
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
@@ -162,7 +162,7 @@
                         data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
                         data-placement="bottom" href="#reserveform">Reserve Table</a>-->
                         <a role="button" class="btn btn-block nav-link btn-warning"
-                        data-toggle="modal" href="#reserveModal">Reserve Table</a>
+                         id="reserveBut">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -419,6 +419,12 @@
                 $('#carouselButton').children('span').removeClass('fa-play');
                 $('#carouselButton').children('span').addClass('fa-pause');                
             }
+        });
+        $('#loginBut').click(function(){
+            $('#loginModal').modal('toggle');
+        });
+        $('#reserveBut').click(function(){
+            $('#reserveModal').modal('toggle');
         });
         $("#loginModalHeader").click(function(){
             $('#loginModal').modal('hide');
